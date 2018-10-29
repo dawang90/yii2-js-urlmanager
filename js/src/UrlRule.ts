@@ -56,8 +56,9 @@ export default class UrlRule {
 
                 if (!this.validateGroup(groupRegexpString, <string> urlParams[groupKey])) {
                     // Suppose it is invalid url unless group passed test
-                    validRule = false;
-                    break;
+                    // validRule = false;
+                    // break;
+                    return false;
                 }
 
                 resultRule = this.replaceGroup(resultRule, group, <string>urlParams[groupKey]);
